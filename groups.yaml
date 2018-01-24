@@ -1,0 +1,78 @@
+Climate:
+  name: Climate
+  icon: mdi:thermometer
+  view: yes
+  entities:
+    - group.Indoors
+    - group.Weather
+Downstairs:
+  name: Downstairs
+  entities:
+    - light.game_room_level
+Indoors:
+  name: Indoor Air
+  entities:
+    - climate.hallway
+    - sensor.bathroom_4_in_1_temperature
+    - sensor.bathroom_4_in_1_relative_humidity
+    - sensor.hallway_thermostat_humidity
+Weather:
+  name: Weather
+  entities:
+    - sensor.dark_sky_summary
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_apparent_temperature
+    - sensor.dark_sky_daily_high_temperature
+    - sensor.dark_sky_daily_low_temperature
+    - sensor.dark_sky_precip
+    - sensor.dark_sky_precip_intensity
+    - sensor.dark_sky_precip_probability
+    - sensor.dark_sky_nearest_storm_distance
+    - sensor.dark_sky_wind_speed
+    - sun.sun
+    - sensor.moon
+Living_Room:
+  name: Living Room
+  entities:
+    - light.entry_level
+Media:
+  name: Media
+  icon: mdi:library-music
+  view: yes
+  entities:
+    - media_player.laundry_room_speaker
+    - media_player.basement_speaker
+    - media_player.upstairs_bathroom
+    - media_player.bedroom_speaker
+    - media_player.kitchen_speaker
+    - media_player.living_room_tv
+Rooms:
+  name: Lights
+  icon: mdi:flash
+  view: yes
+  entities:
+    - group.Upstairs_Bathroom
+    - group.Living_Room
+    - group.Downstairs
+Upstairs_Bathroom:
+  name: Upstairs Bathroom
+  entities:
+    - switch.upstairs_bathroom_fan_switch
+    - light.upstairs_bathroom_level
+People:
+  name: People
+  icon: mdi:account-multiple
+  view: yes
+  entities:
+    - group.Jordan
+    - group.Casey
+Jordan:
+  name: Jordan
+  entities:
+    - device_tracker.8fdcf6ee
+    - sensor.jordan_phone_battery
+    - sensor.steps
+Casey:
+  name: Casey
+  entities:
+    - device_tracker.samsungsmg935aattlocalnet

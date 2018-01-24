@@ -1,0 +1,92 @@
+- action:
+  - data:
+      entity_id: light.upstairs_bathroom_level
+    service: light.turn_on
+  - data:
+      entity_id: switch.upstairs_bathroom_fan_switch
+    service: switch.turn_on
+  alias: Turn on bathroom light when there is movement
+  condition: []
+  id: '1513895339095'
+  trigger:
+  - entity_id: sensor.bathroom_4_in_1_alarm_level
+    from: '0'
+    platform: state
+    to: '255'
+- action:
+  - data:
+      entity_id: light.upstairs_bathroom_level
+    service: light.turn_off
+  - data:
+      entity_id: switch.upstairs_bathroom_fan_switch
+    service: switch.turn_off
+  alias: Turn off bathroom light when there is no movement
+  condition: []
+  id: '1513895339378'
+  trigger:
+  - entity_id: sensor.bathroom_4_in_1_alarm_level
+    for:
+      minutes: 10
+    platform: state
+    to: '0'
+- action:
+  - data:
+      entity_id: switch.upstairs_bathroom_fan_switch
+    service: switch.turn_on
+  alias: Turn on bathroom fan if there is high humidity
+  condition: []
+  id: '1514470885586'
+  trigger:
+  - above: '10'
+    entity_id: sensor.bathroom_4_in_1_relative_humidity
+    platform: numeric_state
+    value_template: '{{ states.sensor.bathroom_4_in_1_relative_humidity.state | round(2)
+      - states.sensor.hallway_thermostat_humidity.state | round(2)  }}'
+- action:
+  - data:
+      entity_id: switch.upstairs_bathroom_fan_switch
+    service: switch.turn_off
+  alias: Turn off bathroom fan if low humidity
+  condition: []
+  id: '1514470950921'
+  trigger:
+  - below: '10'
+    entity_id: sensor.bathroom_4_in_1_relative_humidity
+    platform: numeric_state
+    value_template: '{{ states.sensor.bathroom_4_in_1_relative_humidity.state | round(2)
+      - states.sensor.hallway_thermostat_humidity.state | round(2)  }}'
+- action:
+  - data:
+      entity_id: switch.porch_switch
+    service: switch.turn_on
+  alias: Turn on Porchlight at Sunset
+  condition: []
+  id: '1515440853909'
+  trigger:
+  - event: sunset
+    offset: -00:15:00
+    platform: sun
+- action:
+  - data:
+      entity_id: switch.porch_switch
+    service: switch.turn_off
+  alias: Turn off Porchlight at Sunrise
+  condition: []
+  id: '1515441002360'
+  trigger:
+  - event: sunrise
+    offset: +00:15:00
+    platform: sun
+- action:
+  - data:
+      brightness_pct: '100'
+      entity_id: light.entry_level
+    service: light.turn_on
+  alias: Turn on Stairway light when Front Door is opened
+  condition: []
+  id: '1515770332574'
+  trigger:
+  - entity_id: sensor.front_door_access_control
+    from: '23'
+    platform: state
+    to: '22'

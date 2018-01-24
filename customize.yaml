@@ -1,0 +1,37 @@
+#Climate
+sensor.dark_sky_nearest_storm_distance:
+  friendly_name: Nearest Storm Distance
+sensor.dark_sky_summary:
+  friendly_name: Weather
+sensor.dark_sky_wind_speed:
+  friendly_name: Wind Speed
+sensor.dark_sky_temperature:
+  friendly_name: Temperature
+sensor.dark_sky_apparent_temperature:
+  friendly_name: Feels Like
+sensor.dark_sky_daily_high_temperature:
+  friendly_name: Temp High
+sensor.dark_sky_daily_low_temperature:
+  friendly_name: Temp Low
+sensor.dark_sky_precip_intensity:
+  friendly_name: Rainfall
+sensor.dark_sky_precip_probability:
+  friendly_name: Chance of Rain
+sensor.hallway_thermostat_humidity:
+  friendly_name: Hallway Humidity
+climate.hallway:
+  friendly_name: Hallway Nest
+  
+# Upstairs Bathroom
+sensor.bathroom_4_in_1_temperature:
+  friendly_name: Upstairs Bathroom Temperature
+sensor.bathroom_4_in_1_relative_humidity:
+  friendly_name: Upstairs Bathroom Humidity
+  
+# People
+sensor.steps:
+  friendly_name: Steps
+device_tracker.unknown94652d2c7e65attlocalnet:
+  friendly_name: Phone
+device_tracker.samsungsmg935aattlocalnet:
+  friendly_name: Phone

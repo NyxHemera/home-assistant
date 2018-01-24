@@ -1,0 +1,33 @@
+binary_sensor.sensor:
+  ignored: false
+  polling_intensity: 0
+binary_sensor.bathroom_4_in_1_sensor:
+  ignored: false
+  polling_intensity: 0
+sensor.bathroom_4_in_1_alarm_type:
+  ignored: true
+  polling_intensity: 0
+sensor.bathroom_4_in_1_burglar:
+  ignored: true
+  polling_intensity: 0
+sensor.bathroom_4_in_1_emergency:
+  ignored: true
+  polling_intensity: 0
+sensor.bathroom_4_in_1_sourcenodeid:
+  ignored: true
+  polling_intensity: 0
+sensor.front_door_alarm_level:
+  ignored: true
+  polling_intensity: 0
+sensor.front_door_alarm_type:
+  ignored: true
+  polling_intensity: 0
+sensor.front_door_burglar:
+  ignored: true
+  polling_intensity: 0
+binary_sensor.front_door_sensor:
+  ignored: true
+  polling_intensity: 0
+sensor.front_door_sourcenodeid:
+  ignored: true
+  polling_intensity: 0
