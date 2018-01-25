@@ -13,38 +13,21 @@ homeassistant:
   # Customization file
   customize: !include customize.yaml
 
-# Show links to resources in log and frontend
-# introduction:
-
 # Enables the frontend
-# frontend:
-
 frontend:
-  # extra_html_url:
-  #   - /www/custom_ui/state-card-custom-ui.html
-  # extra_html_url_es5:
-  #   - /www/custom_ui/state-card-custom-ui-es5.html
 
 # Enables configuration UI
 config:
 
+# Sets up duckDNS
 http:
-  # Secrets are defined in the file secrets.yaml
   api_password: !secret http_password
   base_url: https://the-ping-in-the-north.duckdns.org:8123
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
-  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  # base_url: example.duckdns.org:8123
 
 # Checks for available updates
-# Note: This component will send some information about your system to
-# the developers to assist with development of Home Assistant.
-# For more information, please see:
-# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
 updater:
-  # Optional, allows Home Assistant developers to focus on popular components.
-  # include_used_components: true
 
 # Discover some devices automatically
 discovery:
@@ -58,55 +41,16 @@ history:
 # View all events in a logbook
 logbook:
 
+# Shows the map
+map:
+
 # Track the sun
 sun:
 
-sensor:
-  - platform: moon
-  - platform: cpuspeed
-  - platform: speedtest
-    minute:
-      - 0
-      - 15
-      - 30
-      - 45
-    monitored_conditions:
-      - download
-  - platform: fitbit
-    clock_format: 12H
-    monitored_resources:
-      - "activities/steps"
-      - "activities/floors"
-  - platform: darksky
-    api_key: !secret darksky_apikey
-    monitored_conditions:
-      - summary
-      - temperature
-      - apparent_temperature
-      - precip_type
-      - precip_intensity
-      - precip_probability
-      - nearest_storm_distance
-      - wind_speed
-      - hourly_summary
-      - temperature_max
-      - temperature_min
-  - platform: template
-    sensors:
-      jordan_phone_battery:
-        friendly_name: Battery
-        unit_of_measurement: '%'
-        value_template: "{{ states.device_tracker['8fdcf6ee'].attributes.battery }}"
-        icon_template: "
-            {% set battery_level = states.device_tracker['8fdcf6ee'].attributes.battery|default(0)|int %}
-            {% set battery_round = (battery_level / 10) |int * 10 %}
-            {% if battery_round >= 100 %}
-              mdi:battery
-            {% elif battery_round > 0 %}
-              mdi:battery-{{ battery_round }}
-            {% else %}
-              mdi:battery-alert
-            {% endif %}"
+sensor: !include_dir_merge_list sensor
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
 
 vacuum:
   - platform: xiaomi_miio
@@ -115,10 +59,6 @@ vacuum:
 
 media_player:
   - platform: cast
-  # - platform: samsungtv
-  #   host: 192.168.1.83
-  #   mac: 68:27:37:45:7c:8e
-  #   port: 8001
 
 # Text to speech
 tts:
@@ -134,14 +74,6 @@ device_tracker:
       track_new_devices: False
       hide_if_away: False
   - platform: gpslogger
-  
-map:
-
-# sensor:
-#   platform: pi_hole
-#   host: 192.168.0.106
-#   monitored_conditions:
-#     - ads_blocked_today
 
 google_assistant:
   project_id: homeassistant-33aea
@@ -154,10 +86,6 @@ zwave:
 nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
-
-group: !include groups.yaml
-automation: !include automations.yaml
-script: !include scripts.yaml
 
 notify:
   - name: Mail_Delivery

@@ -1,5 +1,6 @@
 *
 !*.yaml
 !.gitignore
+!sensor
 secrets.yaml
 known_devices.yaml
