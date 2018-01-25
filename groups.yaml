@@ -76,3 +76,13 @@ Casey:
   name: Casey
   entities:
     - device_tracker.samsungsmg935aattlocalnet
+Vacuum:
+  name: Vacuum
+  entities:
+    - vacuum.xiaomi_vacuum_cleaner
+    - sensor.xiaomi_vacuum_status
+    - sensor.xiaomi_vacuum_battery
+    - sensor.xiaomi_vacuum_fan_speed
+    - sensor.xiaomi_vacuum_filter_life
+    - sensor.xiaomi_vacuum_main_brush_life
+    - sensor.xiaomi_vacuum_side_brush_life

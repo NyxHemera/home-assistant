@@ -1,0 +1,75 @@
+# Displays the vacuum's battery percentage (Charging,)
+- platform: template
+  sensors:
+    xiaomi_vacuum_status:
+      friendly_name: Status
+      value_template: "{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.status }}"
+      icon_template: mdi:google-circles-group
+
+# Displays the vacuum's battery percentage
+- platform: template
+  sensors:
+    xiaomi_vacuum_battery:
+      friendly_name: Battery
+      unit_of_measurement: '%'
+      value_template: "{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.battery_level }}"
+      icon_template: "{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.battery_icon }}"
+      
+# Displays the vacuum's fan speed
+- platform: template
+  sensors:
+    xiaomi_vacuum_fan_speed:
+      friendly_name: Fan Speed
+      value_template: "{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.fan_speed }}"
+      icon_template: mdi:fan
+      
+# Displays the vacuum's filter hours left (150hr life)
+- platform: template
+  sensors:
+    xiaomi_vacuum_filter_life:
+      friendly_name: Filter Life Remaining
+      unit_of_measurement: 'hours'
+      value_template: "{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.filter_left }}"
+      icon_template: "
+        {% set battery_level =  states.vacuum.xiaomi_vacuum_cleaner.attributes.filter_left|default(0)|int %}
+        {% if battery_level >= 75 %}
+          mdi:heart
+        {% elif battery_level >= 1 %}
+          mdi:heart-half
+        {% else %}
+          mdi:heart-broken
+        {% endif %}"
+      
+# Displays the vacuum's main brush hours left (300hr life)
+- platform: template
+  sensors:
+    xiaomi_vacuum_main_brush_life:
+      friendly_name: Main Brush Life Remaining
+      unit_of_measurement: 'hours'
+      value_template: "{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.main_brush_left }}"
+      icon_template: "
+        {% set battery_level =  states.vacuum.xiaomi_vacuum_cleaner.attributes.main_brush_left|default(0)|int %}
+        {% if battery_level >= 150 %}
+          mdi:heart
+        {% elif battery_level >= 1 %}
+          mdi:heart-half
+        {% else %}
+          mdi:heart-broken
+        {% endif %}"
+      
+# Displays the vacuum's side brush hours left (200hr life)
+- platform: template
+  sensors:
+    xiaomi_vacuum_side_brush_life:
+      friendly_name: Side Brush Life Remaining
+      unit_of_measurement: 'hours'
+      value_template: "{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.side_brush_left }}"
+      icon_template: "
+        {% set battery_level =  states.vacuum.xiaomi_vacuum_cleaner.attributes.side_brush_left|default(0)|int %}
+        {% if battery_level >= 100 %}
+          mdi:heart
+        {% elif battery_level >= 1 %}
+          mdi:heart-half
+        {% else %}
+          mdi:heart-broken
+        {% endif %}"
