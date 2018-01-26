@@ -101,7 +101,7 @@
   - entity_id: device_tracker.8fdcf6ee
     from: home
     platform: state
-    to: away
+    to: not_home
 - action:
   - data:
       home_mode: home
@@ -111,6 +111,6 @@
   id: '1516929582840'
   trigger:
   - entity_id: device_tracker.8fdcf6ee
-    from: away
+    from: not_home
     platform: state
     to: home
