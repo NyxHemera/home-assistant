@@ -90,3 +90,27 @@
     from: '23'
     platform: state
     to: '22'
+- action:
+  - data:
+      home_mode: away
+    service: nest.set_mode
+  alias: Set Nest to eco mode when no one is home
+  condition: []
+  id: '1516929503237'
+  trigger:
+  - entity_id: device_tracker.8fdcf6ee
+    from: home
+    platform: state
+    to: away
+- action:
+  - data:
+      home_mode: home
+    service: nest.set_mode
+  alias: Set Nest to on when someone is home
+  condition: []
+  id: '1516929582840'
+  trigger:
+  - entity_id: device_tracker.8fdcf6ee
+    from: away
+    platform: state
+    to: home

@@ -12,3 +12,16 @@
     - hourly_summary
     - temperature_max
     - temperature_min
+    
+# Combines the min-max temperatures for the day.
+- platform: template
+  sensors:
+    dark_sky_low_high_temp:
+      friendly_name: Temp Low-High
+      value_template: "{{ 
+                        states('sensor.dark_sky_daily_low_temperature') 
+                        }}{{ states.sensor.dark_sky_daily_low_temperature.attributes.unit_of_measurement 
+                        }} - {{ 
+                        states('sensor.dark_sky_daily_high_temperature') 
+                        }}{{ states.sensor.dark_sky_daily_high_temperature.attributes.unit_of_measurement }}"
+      icon_template: "mdi:thermometer"

@@ -1,0 +1,15 @@
+# Sunrise Time
+- platform: template
+  sensors:
+    dawn_time:
+      friendly_name: Dawn
+      value_template: "{{ as_timestamp(states.sun.sun.attributes.next_dawn)  | timestamp_custom('%I:%M:%S %p') }}"
+      icon_template: "mdi:weather-sunset-up"
+      
+# Sunset Time
+- platform: template
+  sensors:
+    sunset_time:
+      friendly_name: Sunset
+      value_template: "{{ as_timestamp(states.sun.sun.attributes.next_setting)  | timestamp_custom('%I:%M:%S %p') }}"
+      icon_template: "mdi:weather-sunset-down"

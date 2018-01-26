@@ -31,7 +31,7 @@ sensor.bathroom_4_in_1_relative_humidity:
 # People
 sensor.steps:
   friendly_name: Steps
-device_tracker.unknown94652d2c7e65attlocalnet:
-  friendly_name: Phone
+device_tracker.8fdcf6ee:
+  friendly_name: Jordan's Phone
 device_tracker.samsungsmg935aattlocalnet:
   friendly_name: Casey's Phone
