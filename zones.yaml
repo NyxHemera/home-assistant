@@ -1,0 +1,29 @@
+- name: Home
+  latitude: 33.906858
+  longitude: -84.301314
+  icon: mdi:home
+  
+- name: Work - Slalom
+  latitude: 33.854467
+  longitude: -84.358512
+  icon: mdi:briefcase
+  
+- name: "Casey's Apartment"
+  latitude: 33.800143
+  longitude: -84.370430
+  icon: mdi:home-heart
+  
+- name: "Casey's Parent's"
+  latitude: 33.929374
+  longitude: -84.321291
+  icon: mdi:account-multiple
+  
+- name: "Jordan's Parent's"
+  latitude: 34.664896
+  longitude: -78.993429
+  icon: mdi:account-multiple
+  
+- name: Beach House
+  latitude: 33.885520
+  longitude: -78.502975
+  icon: mdi:beach

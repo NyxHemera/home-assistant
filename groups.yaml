@@ -72,11 +72,12 @@ People:
   view: yes
   entities:
     - group.Jordan
+    - camera.jordan
     - group.Casey
 Jordan:
   name: Jordan
   entities:
-    - device_tracker.8fdcf6ee
+    - sensor.jordan_phone_zone
     - sensor.jordan_phone_battery
     - sensor.steps
 Casey:

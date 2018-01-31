@@ -15,3 +15,27 @@
           {% else %}
             mdi:battery-alert
           {% endif %}"
+          
+# Displays Jordan's phone's zone
+- platform: template
+  sensors:
+    jordan_phone_zone:
+      friendly_name: Where am I?
+      value_template: "{{ states('device_tracker.8fdcf6ee') }}"
+      icon_template: "
+          {% set loc = states('device_tracker.8fdcf6ee') %}
+          {% if loc == 'Beach House' %}
+            mdi:beach
+          {% elif loc == 'Home'%}
+            mdi:home
+          {% elif loc == 'not_home'%}
+            mdi:road-variant
+          {% elif loc == 'Casey''s Parent''s'%}
+            mdi:account-multiple
+          {% elif loc == 'Casey''s Apartment'%}
+            mdi:home-heart
+          {% elif loc == 'Jordan''s Parent''s'%}
+            mdi:account-multiple
+          {% elif loc == 'Work - Slalom'%}
+            mdi:briefcase
+          {% endif %}"
