@@ -128,3 +128,17 @@
     from: '23'
     platform: state
     to: '22'
+- action:
+  - data:
+      message: Someone has taken the mailbox sensor!
+      target:
+      - device/Jordan
+    service: notify.pushbullet_main
+  alias: The mailbox sensor is gone!
+  condition: []
+  id: '1517525565966'
+  trigger:
+  - entity_id: sensor.mailbox_burglar
+    from: '0'
+    platform: state
+    to: '3'
