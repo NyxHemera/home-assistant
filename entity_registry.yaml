@@ -1,0 +1,216 @@
+climate.hallway:
+  name:
+  platform: nest
+  unique_id: sk3oI1tDKME2MHy6qmm3hS-QQ7pm0dt-
+media_player.living_room_tv:
+  name:
+  platform: cast
+  unique_id: 0486e83e-b649-6dfb-3aeb-b57f576735c5
+media_player.basement_speaker:
+  name:
+  platform: cast
+  unique_id: 5f8b333a-0e04-5ad3-0649-6e22d97e4684
+media_player.kitchen_speaker:
+  name:
+  platform: cast
+  unique_id: cc6f1b3b-9c3a-be1a-1798-d250da69215f
+media_player.upstairs:
+  name:
+  platform: cast
+  unique_id: 68846617-0de2-4dbb-a24c-2cc3ab459ac8
+media_player.whole_house:
+  name:
+  platform: cast
+  unique_id: 6201026c-2bb9-4bf8-86e6-2484a7e64114
+media_player.upstairs_bathroom:
+  name:
+  platform: cast
+  unique_id: c6973c2b-7d4b-dda4-1d60-50812d651e0b
+media_player.bedroom_speaker:
+  name:
+  platform: cast
+  unique_id: d2d46f0c-8316-44c9-5a2f-071048bd2bee
+media_player.laundry_room_speaker:
+  name:
+  platform: cast
+  unique_id: 96df4f3d-5acc-e711-6d68-38c62530b727
+light.upstairs_bathroom_level:
+  name:
+  platform: zwave
+  unique_id: 3-72057594093076481
+switch.upstairs_bathroom_fan_switch:
+  name:
+  platform: zwave
+  unique_id: 4-72057594109837312
+light.game_room_level:
+  name:
+  platform: zwave
+  unique_id: 5-72057594126630913
+binary_sensor.front_door_sensor:
+  name:
+  platform: zwave
+  unique_id: 8-72057594177126400
+sensor.front_door_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191361
+sensor.front_door_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191377
+sensor.front_door_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191393
+sensor.front_door_access_control:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191505
+sensor.front_door_burglar:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191521
+binary_sensor.bathroom_4_in_1_sensor:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193903616
+sensor.bathroom_4_in_1_temperature:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193920018
+sensor.bathroom_4_in_1_luminance:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193920050
+sensor.bathroom_4_in_1_relative_humidity:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193920082
+sensor.bathroom_4_in_1_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 9-72057594194968577
+sensor.bathroom_4_in_1_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 9-72057594194968593
+sensor.bathroom_4_in_1_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 9-72057594194968609
+sensor.bathroom_4_in_1_burglar:
+  name:
+  platform: zwave
+  unique_id: 9-72057594194968737
+sensor.bathroom_4_in_1_emergency:
+  name:
+  platform: zwave
+  unique_id: 9-72057594194968785
+binary_sensor.mailbox_sensor:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227458048
+sensor.mailbox_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523009
+sensor.mailbox_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523025
+sensor.mailbox_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523041
+sensor.mailbox_access_control:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523153
+sensor.mailbox_burglar:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523169
+light.entry_level:
+  name:
+  platform: zwave
+  unique_id: 14-72057594277625857
+switch.porch_switch:
+  name:
+  platform: zwave
+  unique_id: 15-72057594294386688
+sensor.upstairs_bathroom_door_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 18-72057594345963521
+sensor.upstairs_bathroom_door_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 18-72057594345963537
+sensor.upstairs_bathroom_door_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 18-72057594345963553
+sensor.upstairs_bathroom_door_access_control:
+  name:
+  platform: zwave
+  unique_id: 18-72057594345963665
+sensor.upstairs_bathroom_door_burglar:
+  name:
+  platform: zwave
+  unique_id: 18-72057594345963681
+sensor.upstairs_bathroom_door_power_management:
+  name:
+  platform: zwave
+  unique_id: 18-72057594345963697
+sensor.upstairs_bathroom_door_system:
+  name:
+  platform: zwave
+  unique_id: 18-72057594345963713
+sensor.upstairs_bathroom_door_emergency:
+  name:
+  platform: zwave
+  unique_id: 18-72057594345963729
+sensor.upstairs_bathroom_door_clock:
+  name:
+  platform: zwave
+  unique_id: 18-72057594345963745
+sensor.upstairs_bathroom_door_appliance:
+  name:
+  platform: zwave
+  unique_id: 18-72057594345963761
+sensor.porch_door_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 19-72057594362740737
+sensor.porch_door_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 19-72057594362740753
+sensor.porch_door_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 19-72057594362740769
+sensor.porch_door_access_control:
+  name:
+  platform: zwave
+  unique_id: 19-72057594362740881
+sensor.porch_door_burglar:
+  name:
+  platform: zwave
+  unique_id: 19-72057594362740897
+sensor.porch_door_system:
+  name:
+  platform: zwave
+  unique_id: 19-72057594362740929
+sensor.porch_door_emergency:
+  name:
+  platform: zwave
+  unique_id: 19-72057594362740945
+sensor.porch_door_clock:
+  name:
+  platform: zwave
+  unique_id: 19-72057594362740961
+sensor.porch_door_appliance:
+  name:
+  platform: zwave
+  unique_id: 19-72057594362740977

@@ -142,3 +142,72 @@
     from: '0'
     platform: state
     to: '3'
+- action:
+  - data:
+      entity_id: light.upstairs_bathroom_level
+    service: light.turn_on
+  - data:
+      entity_id: switch.upstairs_bathroom_fan_switch
+    service: switch.turn_on
+  alias: Turn on bathroom lights when door opens
+  condition: []
+  id: '1521592326331'
+  trigger:
+  - entity_id: sensor.upstairs_bathroom_door_access_control
+    from: '23'
+    platform: state
+    to: '22'
+- action:
+  - data:
+      entity_id: light.upstairs_bathroom_level
+    service: light.turn_on
+  - data:
+      entity_id: switch.upstairs_bathroom_fan_switch
+    service: switch.turn_on
+  alias: Turn on bathroom lights when door closes
+  condition: []
+  trigger:
+  - entity_id: sensor.upstairs_bathroom_door_access_control
+    from: '22'
+    platform: state
+    to: '23'
+- action:
+  - data:
+      entity_id: light.upstairs_bathroom_level
+    service: light.turn_off
+  - data:
+      entity_id: switch.upstairs_bathroom_fan_switch
+    service: switch.turn_off
+  alias: Turn off bathroom light when there is no movement in 10 seconds after door close
+  condition:
+    - condition: state
+      entity_id: sensor.bathroom_4_in_1_alarm_level
+      state: '0'
+      for:
+        seconds: 10
+  trigger:
+  - entity_id: sensor.upstairs_bathroom_door_access_control
+    for:
+      seconds: 10
+    platform: state
+    to: '23'
+- action:
+  - data:
+      entity_id: light.upstairs_bathroom_level
+    service: light.turn_off
+  - data:
+      entity_id: switch.upstairs_bathroom_fan_switch
+    service: switch.turn_off
+  alias: Turn off bathroom light when there is no movement in 10 seconds after door open
+  condition:
+    - condition: state
+      entity_id: sensor.bathroom_4_in_1_alarm_level
+      state: '0'
+      for:
+        seconds: 10
+  trigger:
+  - entity_id: sensor.upstairs_bathroom_door_access_control
+    for:
+      seconds: 10
+    platform: state
+    to: '22'
