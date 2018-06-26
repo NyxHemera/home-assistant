@@ -42,6 +42,12 @@ Living_Room:
   name: Living Room
   entities:
     - light.entry_level
+Bedroom:
+  name: Bedroom
+  entities:
+    - light.bedroom_level
+    - switch.bedroom_fan_switch
+    - switch.bedroom_outlet_switch
 Media:
   name: Media
   icon: mdi:library-music
@@ -58,6 +64,7 @@ Rooms:
   icon: mdi:flash
   view: yes
   entities:
+    - group.Bedroom
     - group.Upstairs_Bathroom
     - group.Living_Room
     - group.Downstairs

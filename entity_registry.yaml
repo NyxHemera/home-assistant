@@ -214,15 +214,15 @@ sensor.porch_door_appliance:
   name:
   platform: zwave
   unique_id: 19-72057594362740977
-switch.switch:
+switch.bedroom_outlet_switch:
   name:
   platform: zwave
   unique_id: 20-72057594378272768
-switch.switch_2:
+switch.bedroom_fan_switch:
   name:
   platform: zwave
   unique_id: 21-72057594395049984
-light.level:
+light.bedroom_level:
   name:
   platform: zwave
   unique_id: 22-72057594411843585

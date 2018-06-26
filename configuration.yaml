@@ -81,6 +81,7 @@ google_assistant:
   project_id: homeassistant-33aea
   client_id: !secret google_assistant_client_id
   access_token: !secret google_assistant_access_token
+  api_key: AIzaSyDb4aB4-Az9DYFvjJZRUDo7aMoQztEDdsg
 
 zwave:
   usb_path: /dev/ttyACM0
